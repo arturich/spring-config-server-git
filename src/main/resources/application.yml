@@ -1,0 +1,24 @@
+server:
+    port: 8888
+encrypt:
+        key: ABCDEFGHIJKLMNOPQRSTUVWXWZ    
+spring:
+    security:
+        user:
+            name: cloudclient
+            password: cloudclient123    
+    cloud:
+        config:
+            server:
+                encrypt:
+                    enabled: false
+                git:
+                    uri: https://github.com/arturich/spring-cloud-mx-acc
+                    search-paths:
+                    - station*
+                    repos:
+                        perf:
+                            pattern: '*/perf'
+                            uri: https://github.com/arturich/spring-cloudconfig-wa-tolls
+                            search-paths:
+                            - 'station*'
